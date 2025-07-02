@@ -34,6 +34,7 @@
   * Connected to domain-specific AI stack via orchestrator
 
 ---
+
 ```mermaid
 graph TD
   subgraph "Core Modular Platform"
@@ -102,7 +103,72 @@ graph TD
   D1 --> E1
   D2 --> E2
   D3 --> E3
-  ```
+```
+```mermaid
+graph TD
+  subgraph "Compliance App (AI Standards Consultant)"
+    A1["Workflow Builder"]
+    A2["DSL + Metadata"]
+    A3["Engine Core"]
+    A4["Compliance AI Stack"]
+    A5["Domain Workflows + SoA"]
+    A6["Exportable Runtime"]
+    A7["Shared Supabase DB"]
+    A8["Cloud/Hybrid AI Deployment"]
+    A9["Trace Logger + Audit Trails"]
+  end
+
+  A1 --> A2 --> A3 --> A5
+  A3 --> A4
+  A3 --> A6
+  A6 --> A7
+  A4 --> A8
+  A4 --> A9
+```
+
+```mermaid
+graph TD
+  subgraph "5G Orchestration App (Arion5G)"
+    B1["Workflow Builder"]
+    B2["DSL + Metadata"]
+    B3["Exported Engine"]
+    B4["5G AI Stack"]
+    B5["Telemetry-Informed Workflows"]
+    B6["Standalone Deployment"]
+    B7["Dedicated 5G DB"]
+    B8["Local + Cloud LLM Mix"]
+    B9["Anomaly Logs + AI Justifications"]
+  end
+
+  B1 --> B2 --> B3 --> B5
+  B3 --> B4
+  B3 --> B6
+  B6 --> B7
+  B4 --> B8
+  B4 --> B9
+```
+
+```mermaid
+graph TD
+  subgraph "TrainerOps App (Lab/Test Designer)"
+    C1["Workflow Builder"]
+    C2["DSL + Metadata"]
+    C3["Exported Engine"]
+    C4["Training AI Stack"]
+    C5["Lesson/Assessment Workflows"]
+    C6["Standalone or Edge Deployment"]
+    C7["Edge-Optimized DB"]
+    C8["Instructional LLM Model"]
+    C9["Progress Trace + AI Feedback Logs"]
+  end
+
+  C1 --> C2 --> C3 --> C5
+  C3 --> C4
+  C3 --> C6
+  C6 --> C7
+  C4 --> C8
+  C4 --> C9
+```
 
 ---
 
@@ -166,29 +232,6 @@ graph TD
 
 ---
 
-## 🚀 Domain Applications
-
-### 1. **Compliance App (AI Standards Consultant)**
-
-* Uses builder-created workflows tagged for compliance
-* Scoped to ISO 27001, GDPR, NIS2, etc.
-* Connects to **Compliance LLM stack**
-* Enables SoA generation, gap analysis, clause-level traceability
-
-### 2. **5G Orchestration App (Arion5G)**
-
-* Uses exported engine instance, embedded in ops UI
-* Drives RAN/NF orchestration, anomaly workflows, telemetry
-* Connects to **5G LLM stack** trained on network operations
-
-### 3. **TrainerOps App (Lab/Test Designer)**
-
-* Exports test/training workflows
-* AI helps author curriculum, auto-generate assessments, simulate user feedback
-* Connects to **Training LLM stack** optimized for instructional design
-
----
-
 ## 🧩 Domain-Specific LLM 2.0 Compliant AI Stacks
 
 * **Compliance LLM Stack**
@@ -221,4 +264,4 @@ All stacks:
 
 ---
 
-Would you like a visual export of the Mermaid architecture diagram as well?
+Would you like visual exports of these new per-use-case diagrams or add annotations to highlight deployment boundaries?
