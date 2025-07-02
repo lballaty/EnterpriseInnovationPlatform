@@ -37,36 +37,36 @@
 
 ```mermaid
 graph TD
-    subgraph "🧠 Core Modular Platform"
-        A1[Workflow Builder UI<br>(Flutter native)]
+    subgraph "Core Modular Platform"
+        A1[Workflow Builder UI (Flutter native)]
         A2[Builder Metadata Model]
         A3[Shared Step Type Library]
         A4[Shared DSL & Validator]
     end
 
-    subgraph "🗂️ Domain Configurations"
-        B1[Compliance Config<br>(AI Standards Consultant)]
-        B2[5G Config<br>(Arion5G Orchestrator)]
-        B3[Training Config<br>(TrainerOps)]
+    subgraph "Domain Configurations"
+        B1[Compliance Config (AI Standards Consultant)]
+        B2[5G Config (Arion5G Orchestrator)]
+        B3[Training Config (TrainerOps)]
     end
 
-    subgraph "📦 Workflow Engine Package (Reusable Core)"
+    subgraph "Workflow Engine Package (Reusable Core)"
         C1[Engine Runtime Core]
         C2[Trigger & Step Resolver]
         C3[AI Orchestration Layer]
         C4[Logging & Traceability]
     end
 
-    subgraph "🚀 Domain App Instances"
-        D1[Compliance App<br>(uses shared DB/schema)]
-        D2[5G Orchestration App<br>(dedicated DB + AI)]
-        D3[TrainingOps App<br>(separate deployment)]
+    subgraph "Domain App Instances"
+        D1[Compliance App (uses shared DB/schema)]
+        D2[5G Orchestration App (dedicated DB + AI)]
+        D3[TrainingOps App (separate deployment)]
     end
 
-    subgraph "🧩 AI Backend(s)"
-        E1[Compliance AI Stack<br>(Prompt, RAG, Audit)]
-        E2[5G AI Stack<br>(Telemetry + NLP)]
-        E3[Training AI Stack<br>(Instructional Feedback)]
+    subgraph "AI Backend(s)"
+        E1[Compliance AI Stack (Prompt, RAG, Audit)]
+        E2[5G AI Stack (Telemetry + NLP)]
+        E3[Training AI Stack (Instructional Feedback)]
     end
 
     A1 --> A2 --> A3 --> A4
